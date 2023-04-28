@@ -1,0 +1,22 @@
+[package]
+name = "rustbloc"
+version = "0.1.0"
+edition = "2021"
+description = "Bitcoin Wallet SDK For Flutter Mobile Application"
+
+[lib]
+crate-type = ["staticlib", "cdylib"]
+
+[dev-dependencies]
+assert_matches = "1.5"
+
+[build-dependencies]
+flutter_rust_bridge_codegen = { version = "= 1.63.0"  }
+
+
+[dependencies]
+rand = "0.8"
+bdk = { version = "0.27.1", features = ["all-keys", "use-esplora-ureq", "sqlite-bundled", "rpc"] }
+flutter_rust_bridge = { version = "= 1.63.0"  }
+serde = "1.0.89"
+anyhow = "1.0.68"
